@@ -11,9 +11,15 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxt/http": "^0.6.4",
     "@nuxtjs/axios": "^5.13.6",
+    "@sendgrid/mail": "^7.4.6",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3",
+    "nuxt": "^2.15.7",
+    "validator": "^13.6.0",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

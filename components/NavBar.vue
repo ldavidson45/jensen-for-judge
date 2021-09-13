@@ -30,18 +30,18 @@ export default {
   <div class="page-wrapper">
     <div class="header">
       <div class="header__nav-bar">
-        <router-link to="/">
+        <nuxt-link to="/">
           <h1 class="logo">
             <span class="logo__name">Linda Collins Jensen</span>
             <span class="logo__title"> Juvenile Court Judge </span>
           </h1>
-        </router-link>
+        </nuxt-link>
         <div class="nav-links-wrapper" :class="{ expanded: showNavLinks }">
           <ul class="nav-links">
             <li v-for="(link, id) in navigationLinks" :key="id">
-              <router-link :to="link.path">
+              <nuxt-link :to="link.path">
                 {{ link.displayName }}
-              </router-link>
+              </nuxt-link>
             </li>
           </ul>
         </div>
@@ -54,9 +54,7 @@ export default {
       </div>
     </div>
 
-    <div class="body">
-      <router-view></router-view>
-    </div>
+    <div class="body"></div>
   </div>
 </template>
 

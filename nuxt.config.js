@@ -1,9 +1,9 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -39,6 +39,7 @@ export default {
     families: {
       Roboto: [400, 600, 700, 800, 900],
       'Josefin+Sans': true,
+      'Merriweather+Sans': true,
       Lato: [100, 300],
       Raleway: {
         wght: [100, 400],
@@ -48,6 +49,7 @@ export default {
       Barlow: {
         wght: [700],
       },
+      Arvo: [700],
     },
   },
 
@@ -62,8 +64,19 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config) {
+      config.node = {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+      }
+    },
+  },
   styleResources: {
     scss: ['./assets/scss/*.scss'],
   },
+
+  serverMiddleware: ['~/api/index'],
 }
