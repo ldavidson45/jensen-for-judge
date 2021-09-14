@@ -3,7 +3,7 @@ export default {
   name: 'EmailSuccessModal',
   data() {
     return {
-      show: true,
+      show: false,
     }
   },
   methods: {
