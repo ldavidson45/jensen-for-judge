@@ -13,7 +13,7 @@ const sendMail = (name, email, msg) => {
   const message = {
     to: 'lizdavidson45@gmail.com',
     from: email,
-    subject: 'Test Email!',
+    subject: `Campaign Website - New Email from ${name}`,
     text: msg,
     html: `
     <div><strong>From:</strong> ${name}</div>
@@ -24,9 +24,7 @@ const sendMail = (name, email, msg) => {
 
   sgMail
     .send(message)
-    .then(() => {
-      console.log('Email sent')
-    })
+    .then(() => {})
     .catch((error) => {
       console.error(error)
     })

@@ -5,11 +5,6 @@ export const navigationLinks = [
     displayName: 'Meet Linda',
   },
   {
-    path: '/issues',
-    name: 'Issues',
-    displayName: 'Issues',
-  },
-  {
     path: '/election-info',
     name: 'Election Info',
     displayName: 'Election Info',

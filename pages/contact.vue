@@ -40,11 +40,13 @@ export default {
   methods: {
     async sendTest() {
       if (this.isFormValid) {
-        await this.$axios.$post('/api/email', {
-          name: this.name.value,
-          email: this.email.value,
-          msg: this.message.value,
-        })
+        await this.$axios
+          .$post('/api/email', {
+            name: this.name.value,
+            email: this.email.value,
+            msg: this.message.value,
+          })
+          .catch((error) => console.log(error))
         this.showModal()
         this.clearForm()
       } else {
@@ -78,7 +80,10 @@ export default {
   <section class="page">
     <div class="section">
       <h2 class="section__title">Contact Us</h2>
-      <p>Let's keep in touch!</p>
+      <p class="section__subtext">
+        Need a yardsign? Want election updates? Send us a message and we will be
+        in touch!
+      </p>
       <form class="contact-form">
         <div class="contact-form__field">
           <label for="name">Full Name</label>
@@ -150,6 +155,18 @@ export default {
     font-size: 40px;
     color: $navyBlue75;
     font-family: 'Arvo', serif;
+    display: block;
+  }
+
+  &__subtext,
+  &__title {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  &__subtext {
+    padding: 20px 0;
+    font-family: 'Roboto';
   }
 }
 
