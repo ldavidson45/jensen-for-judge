@@ -10,23 +10,16 @@ const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendMail = (name, email, msg) => {
-  //   const transporter = nodemailer.createTransport({
-  //     sendmail: true,
-  //     newline: 'unix',
-  //     path: '/usr/sbin/sendmail',
-  //   })
-  //   transporter.sendMail({
-  //     from: 'ldavidson45@gmail.com',
-  //     to: 'lizdavidson45@gmail.com',
-  //     subject: 'New contact form message',
-  //     text: msg,
-  //   })
   const message = {
     to: 'lizdavidson45@gmail.com',
     from: email,
     subject: 'Test Email!',
     text: msg,
-    html: `<strong>${msg}</strong>`,
+    html: `
+    <div><strong>From:</strong> ${name}</div>
+    <div><strong>Email:</strong> ${email}</div>
+   <div> <strong>Message:</strong></div>
+    <p style="white-space: pre-line">${msg}</p>`,
   }
 
   sgMail
@@ -69,7 +62,7 @@ app.post('/email', (req, res) => {
   }
 
   sendMail(...sanitizedAttributes)
-  res.status(200)
+  res.status(200).json('success')
 })
 
 module.exports = {
