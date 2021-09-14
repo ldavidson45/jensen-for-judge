@@ -43,6 +43,18 @@ export default {
                 {{ link.displayName }}
               </nuxt-link>
             </li>
+            <li>
+              <a
+                href="https://www.facebook.com/Linda-Collins-Jensen-for-Juvenile-Court-Judge-100387862354021"
+                target="_blank"
+                aria-label="Facebook Page: Linda Collins Jensen for Juvenile Court Judge"
+              >
+                <img
+                  class="facebook-logo"
+                  src="~/assets/pics/f_logo_RGB-Blue_250.png"
+                />
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -186,5 +198,9 @@ export default {
       display: flex;
     }
   }
+}
+
+.facebook-logo {
+  height: 19px;
 }
 </style>

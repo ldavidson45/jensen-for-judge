@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "nodemailer": "^6.6.3",
     "nuxt": "^2.15.7",
+    "stripe": "^8.174.0",
     "validator": "^13.6.0",
     "xss-filters": "^1.2.7"
   },

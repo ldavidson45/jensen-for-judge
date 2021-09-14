@@ -1,5 +1,4 @@
 import express from 'express'
-import nodemailer from 'nodemailer'
 import validator from 'validator'
 import xssFilters from 'xss-filters'
 
