@@ -81,8 +81,8 @@ export default {
     <div class="section">
       <h2 class="section__title">Contact Us</h2>
       <p class="section__subtext">
-        Need a yardsign? Want election updates? Send us a message and we will be
-        in touch!
+        Need a yard sign? Want election updates? Send us a message and we will
+        be in touch!
       </p>
       <form class="contact-form">
         <div class="contact-form__field">
