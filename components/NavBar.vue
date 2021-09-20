@@ -150,8 +150,18 @@ export default {
   }
 }
 
+.nav-links > li:not(:last-of-type) {
+  a {
+    line-height: 25px;
+  }
+}
+
 .router-link-active {
   color: #5688c7;
+}
+
+.facebook-logo {
+  height: 25px;
 }
 
 @media only screen and (max-width: 840px) and (min-width: 750px) {
@@ -184,9 +194,15 @@ export default {
     flex-direction: column;
     padding: 5px 10px;
     background: #fff;
+  }
 
+  .nav-links > li:not(:last-of-type),
+  .nav-links > li:last-of-type {
     a {
       line-height: 40px;
+    }
+    img {
+      margin-top: 5px;
     }
   }
 
@@ -198,9 +214,5 @@ export default {
       display: flex;
     }
   }
-}
-
-.facebook-logo {
-  height: 19px;
 }
 </style>
