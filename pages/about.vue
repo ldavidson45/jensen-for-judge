@@ -132,7 +132,6 @@ export default {
 
 .section-text {
   font-family: 'Roboto', sans-serif;
-  // color: #fff;
   color: $navyBlue75;
   font-size: 20px;
   line-height: 28px;
@@ -162,6 +161,10 @@ export default {
     font-size: 20px;
     letter-spacing: 1px;
     margin-top: 10px;
+  }
+
+  &__description {
+    font-family: 'Roboto', sans-serif;
   }
 }
 

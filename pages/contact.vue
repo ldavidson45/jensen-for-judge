@@ -139,6 +139,7 @@ export default {
         </div>
 
         <button class="send-button" type="button" @click="sendTest">
+          <font-awesome-icon icon="paper-plane" class="send-button__icon" />
           Send
         </button>
       </form>
@@ -224,5 +225,22 @@ export default {
   font-weight: bold;
   margin: auto;
   width: 150px;
+
+  &__icon {
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact-form {
+    &__field {
+      min-width: calc(100vw - 120px);
+
+      input,
+      textarea {
+        min-width: calc(100vw - 120px);
+      }
+    }
+  }
 }
 </style>
