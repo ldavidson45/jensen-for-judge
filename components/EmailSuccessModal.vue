@@ -39,8 +39,10 @@ export default {
         </div>
 
         <div class="modal__body">
-          <p>Email sent to jensen4juvenilecourt@gmail.com.</p>
-          <p>You will receive a confirmation email soon</p>
+          <p>
+            Thanks for reaching out! Your email was successfully sent to
+            jensen4juvenilecourt@gmail.com
+          </p>
         </div>
 
         <div class="modal__footer">

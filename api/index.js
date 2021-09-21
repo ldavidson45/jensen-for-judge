@@ -10,8 +10,17 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendMail = (name, email, msg) => {
   const message = {
-    to: 'lizdavidson45@gmail.com',
-    from: email,
+    personalizations: [
+      {
+        to: {
+          email: 'lizdavidson45@gmail.com',
+        },
+        bcc: {
+          email: 'linda.jensen@jensenjuvenilecourt.com',
+        },
+      },
+    ],
+    from: 'linda.jensen@jensenjuvenilecourt.com',
     subject: `Campaign Website - New Email from ${name}`,
     text: msg,
     html: `
@@ -23,7 +32,9 @@ const sendMail = (name, email, msg) => {
 
   sgMail
     .send(message)
-    .then(() => {})
+    .then((res) => {
+      console.log('response', res)
+    })
     .catch((error) => {
       console.error(error)
     })
@@ -43,7 +54,7 @@ const validateAndSanitize = (key, value) => {
   )
 }
 
-app.post('/email', (req, res) => {
+app.post('/email', async (req, res) => {
   const attributes = ['name', 'email', 'msg'] // Our three form fields, all required
 
   // Map each attribute name to the validated and sanitized equivalent (false if validation failed)
@@ -58,7 +69,7 @@ app.post('/email', (req, res) => {
     return res.status(422).json({ error: 'Ugh.. That looks unprocessable!' })
   }
 
-  sendMail(...sanitizedAttributes)
+  await sendMail(...sanitizedAttributes)
   res.status(200).json('success')
 })
 
