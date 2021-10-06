@@ -160,6 +160,7 @@ export default {
   padding: 30px;
   max-width: 900px;
   margin: auto;
+  color: $navyBlue75;
 
   .intro {
     font-size: 38px;
