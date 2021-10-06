@@ -91,6 +91,8 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding: 60px;
+  max-width: 1200px;
+  margin: auto;
 
   &__title {
     font-size: 40px;

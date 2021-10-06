@@ -117,11 +117,12 @@ export default {
 
 .section {
   padding: 60px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .section-title {
   font-size: 50px;
-  // color: #fff;
   color: $navyBlue75;
   font-family: 'Arvo', serif;
 
@@ -138,16 +139,15 @@ export default {
 }
 
 .orgs-section {
-  display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 30px auto;
 }
 
 .org-item {
   background: $brickRed;
   color: #fff;
   padding: 30px;
-  width: 320px;
   margin-bottom: 20px;
 
   &__role {

@@ -41,6 +41,7 @@ export default {
       'Josefin+Sans': true,
       'Merriweather+Sans': true,
       Lato: [100, 300],
+      'Homemade+Apple': true,
       Raleway: {
         wght: [100, 400],
         ital: [100],
