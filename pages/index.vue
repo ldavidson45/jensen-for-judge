@@ -37,7 +37,7 @@ export default {
       </p>
 
       <p class="main-point">
-        I have spent my entire career defending the rights of children an
+        I have spent my entire career defending the rights of children and
         families.
       </p>
 
@@ -201,15 +201,8 @@ export default {
       content: none;
     }
   }
-
-  // This is basically just here to make the family pic take up less vertical space
-  .page-content {
-    transform: translateY(-5%);
-  }
-
   .family-photo {
     width: 110%;
-    transform: translateX(-8%);
   }
 
   .left-rail {

@@ -177,6 +177,8 @@ export default {
     }
     .right-col {
       margin: auto;
+      width: auto;
+      min-width: 0;
     }
   }
 
