@@ -18,7 +18,7 @@ export default {
         </div>
       </div>
 
-      <img class="family-photo" src="../assets/pics/jensen-fam.jpg" />
+      <img class="family-photo" src="~/assets/jensen-fam.jpg" />
     </section>
 
     <section class="personal-bio">

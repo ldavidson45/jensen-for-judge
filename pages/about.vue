@@ -33,7 +33,7 @@ export default {
         <p class="section-text"></p>
       </div>
       <div class="right-col">
-        <img src="../assets/pics/linda.jpg" />
+        <img src="~/assets/linda.jpg" />
       </div>
     </div>
 

@@ -51,7 +51,7 @@ export default {
               >
                 <img
                   class="facebook-logo"
-                  src="~/assets/pics/f_logo_RGB-Blue_250.png"
+                  src="~/assets/f_logo_RGB-Blue_250.png"
                 />
               </a>
             </li>
