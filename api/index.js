@@ -5,7 +5,10 @@ import xssFilters from 'xss-filters'
 const app = express()
 app.use(express.json())
 
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+
 const sgMail = require('@sendgrid/mail')
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendMail = (name, email, msg) => {
@@ -74,6 +77,6 @@ app.post('/email', async (req, res) => {
 })
 
 module.exports = {
-  path: '/api/email',
+  path: '/api',
   handler: app,
 }

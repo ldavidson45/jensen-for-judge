@@ -153,7 +153,7 @@ export default {
   position: relative;
   width: 70%;
   height: auto;
-  margin: auto 0 auto auto;
+  margin: 0 0 auto auto;
 }
 
 .personal-bio {
