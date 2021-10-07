@@ -74,6 +74,6 @@ app.post('/email', async (req, res) => {
 })
 
 module.exports = {
-  path: '/api/',
+  path: '/api/email',
   handler: app,
 }
