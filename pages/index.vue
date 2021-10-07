@@ -203,6 +203,7 @@ export default {
   }
   .family-photo {
     width: 110%;
+    transform: translateX(-9%);
   }
 
   .left-rail {
